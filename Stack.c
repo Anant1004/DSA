@@ -24,21 +24,38 @@ int isFull (struct stack *ptr){
         return 0;
     }
 }
+void push (struct stack*ptr,int val){
+    if(isFull(ptr)){
+        printf("Stack overflow\n");
+    }
+    else{
+        ptr->top++;
+        ptr->arr[ptr->top] = val;
+    }
+}
 
 int main(){
     struct stack *s = (struct stack *)malloc(sizeof(struct stack));
-    s->size = 80;
+    s->size = 10;
     s->top = -1;
     s->arr = (int *)malloc(s->size * sizeof(int));
 
-    s->arr[0] = 1;
-    s->top++;
+    push(s,1);
+    push(s,1);
+    push(s,1);
+    push(s,1);
+    push(s,1);
+    push(s,1);
+    push(s,1);
+    push(s,1);
+    push(s,1);
+    push(s,1);
 
     if(isEmpty(s)){
-        printf("The stack in empty");
+        printf("The stack in empty\n");
     }
     else{
-        printf("The stack not empty");
+        printf("The stack not empty\n");
     }
     return 0;
 }
