@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 int findMax(int arr[], int size) {
     int max = arr[0];
     for (int i = 1; i < size; i++) {
@@ -9,7 +8,6 @@ int findMax(int arr[], int size) {
     }
     return max;
 }
-
 int findMin(int arr[], int size) {
     int min = arr[0];
     for (int i = 1; i < size; i++) {
@@ -19,7 +17,6 @@ int findMin(int arr[], int size) {
     }
     return min;
 }
-
 int main() {
     int size, choice;
     printf("Enter the size of the array: ");
