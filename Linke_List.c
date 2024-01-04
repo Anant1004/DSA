@@ -2,8 +2,9 @@
 #include <stdlib.h>
 struct node
 {
-    int data;
-    struct node *next;
+    struct node *prev;
+    int data; // 232324 ajfkbkbjf  12jpjaf
+    struct node *next; 
 };
 
 // tanseverasal of nodes in a linked list.

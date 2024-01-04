@@ -9,7 +9,7 @@ void PrintArray(int* A,int n){
 void BubbleSort(int* A,int n){
     int temp;
     int issorted = 0; 
-    for (int i = 0; i < n-1; i++)
+    for (int i = 0; i < n-1; i++) // if a array is of size 5 then the loop will run for size-1 = 4 because of the last one remainnig element will automatically sort as it is a simngle element left in the array
     {
         printf("passed : %d\n",i+1);
         issorted = 1;

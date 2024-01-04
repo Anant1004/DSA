@@ -46,6 +46,12 @@ int pop (struct stack *ptr){
         return val;
     }
 }
+void traverse(struct stack *ptr){
+    for (int i = 0; i <= ptr->top; i++) {
+        printf("%d ", ptr->arr[i]);
+    }
+    printf("\n");
+}
 
 int main(){
     struct stack *s = (struct stack *)malloc(sizeof(struct stack));
@@ -63,12 +69,12 @@ int main(){
     push(s,3);
     push(s,2);
     push(s,1);
-
-    printf("popped the first item you pushed : %d \n",pop(s));
-    printf("popped the first item you pushed : %d \n",pop(s));
-    printf("popped the first item you pushed : %d \n",pop(s));
-    printf("popped the first item you pushed : %d \n",pop(s));
-
+    printf("stack elemts are");
+    traverse(s);
+    // printf("popped the first item you pushed : %d \n",pop(s));
+    // printf("popped the first item you pushed : %d \n",pop(s));
+    // printf("popped the first item you pushed : %d \n",pop(s));
+    // printf("popped the first item you pushed : %d \n",pop(s));
 
     if(isEmpty(s)){
         printf("The stack in empty\n");
